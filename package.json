@@ -1,0 +1,23 @@
+{
+  "name": "type-script-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/golsear/type-script-basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/golsear/type-script-basics/issues"
+  },
+  "homepage": "https://github.com/golsear/type-script-basics#readme",
+  "dependencies": {
+    "typescript": "^5.0.2"
+  }
+}
