@@ -1,26 +1,21 @@
-/* function add(a: number, b: number): number {
-    return a + b;
-} */
+/* type User = { id: string };
+type Product = { id: string };
 
-function log(message: string): void {
-    console.log('LOG:', message);
-}
+let user: User = { id: 'user-sadsa' };
+let product: Product = { id: 'product-sdsadsdsa' };  */
 
-function sum(...values: number[]) {
-    return values.reduce((previous, current) => {
-        return previous + current;
-    });
-}
+type Point2D = { x: number, y: number };
+type Point3D = { x: number, y: number, z: number };
 
-sum(1, 2); // 3
-sum(1, 2, 3); // 6
+let point2D: Point2D = { x: 0, y: 0 };
+let point3D: Point3D = { x: 0, y: 0, z: 0 };
 
-type Add = (a: number, b: number) => number;
-// let add: (a: number, b: number) => number;
-let add: Add;
+/** Extra infor is ok */
+point2D = point3D;
+function takesPoint2D (point: Point2D) {/* ... */}
+takesPoint2D(point3D);
 
-/* add = function (a: number, b: number): number {
-    return a + b;
-} */
-
-add = (a, b) => a + b;
+/** Error: missing info */
+// point3D = point2D;
+// function takesPoint3D (point: Point3D) {/* ... */}
+// takesPoint3D(point2D);
