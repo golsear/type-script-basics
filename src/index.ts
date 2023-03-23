@@ -1,9 +1,26 @@
-type Point = { x: number, y: number };
+/* function add(a: number, b: number): number {
+    return a + b;
+} */
 
-const point: Point = { x: 0, y: 0 };
+function log(message: string): void {
+    console.log('LOG:', message);
+}
 
-// point = { x: 1, y: 2 } // Error
+function sum(...values: number[]) {
+    return values.reduce((previous, current) => {
+        return previous + current;
+    });
+}
 
-// All other behaviours are the same as 'let'
-point.x = 123;
-point.y = 123;
+sum(1, 2); // 3
+sum(1, 2, 3); // 6
+
+type Add = (a: number, b: number) => number;
+// let add: (a: number, b: number) => number;
+let add: Add;
+
+/* add = function (a: number, b: number): number {
+    return a + b;
+} */
+
+add = (a, b) => a + b;
