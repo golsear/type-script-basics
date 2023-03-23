@@ -1,21 +1,21 @@
-/* type User = { id: string };
-type Product = { id: string };
+class Animal {
+    protected name: string;
 
-let user: User = { id: 'user-sadsa' };
-let product: Product = { id: 'product-sdsadsdsa' };  */
+    constructor (name: string) {
+        this.name = name;
+    }
 
-type Point2D = { x: number, y: number };
-type Point3D = { x: number, y: number, z: number };
+    public move (distanceInMeters: number): void {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
+}
 
-let point2D: Point2D = { x: 0, y: 0 };
-let point3D: Point3D = { x: 0, y: 0, z: 0 };
+let cat = new Animal('Cat');
+cat.move(10);
+// cat.name = 'Dog';
 
-/** Extra infor is ok */
-point2D = point3D;
-function takesPoint2D (point: Point2D) {/* ... */}
-takesPoint2D(point3D);
-
-/** Error: missing info */
-// point3D = point2D;
-// function takesPoint3D (point: Point3D) {/* ... */}
-// takesPoint3D(point2D);
+class Bird extends Animal {
+    fly (distanceInMeters: number) {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
+}
