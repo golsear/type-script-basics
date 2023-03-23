@@ -1,13 +1,17 @@
-let regExp: RegExp = new RegExp('ab+c');
-let array: Array<number> = [1, 2, 3];
-let set: Set<number> = new Set([1, 2, 3]);
+// Array
+let array: number[] = [1, 2, 3];
 
-/** A first in a first out collection */
+// Usage
+array = [1];
+array = [1, 2, 3, 4, 5];
+// array = ['helloh']; // Error
 
-class Queue<T> {
-    private data: Array<T> = [];
-    push(item: T) { this.data.push(item); }
-    pop(): T | undefined { return this.data.shift(); }
-}
+// Tuple
+let tuple: [number, number] = [0, 0];
 
-let queue: Queue<number> = new Queue();
+// Usage
+tuple = [1, 2];
+tuple = [1, 2];
+// tuple = [1]; // Error: must be 2 items
+// tuple = [1, 2, 3]; // Error: must be 2 items
+// tuple = ['hello', 1] // Error: must be number
