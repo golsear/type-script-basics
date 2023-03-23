@@ -1,17 +1,11 @@
-// Array
-let array: number[] = [1, 2, 3];
+type Point = { x: number, y: number };
 
-// Usage
-array = [1];
-array = [1, 2, 3, 4, 5];
-// array = ['helloh']; // Error
+let center: Point = {
+    x: 0,
+    y: 0
+};
 
-// Tuple
-let tuple: [number, number] = [0, 0];
-
-// Usage
-tuple = [1, 2];
-tuple = [1, 2];
-// tuple = [1]; // Error: must be 2 items
-// tuple = [1, 2, 3]; // Error: must be 2 items
-// tuple = ['hello', 1] // Error: must be number
+let unit: Point = {
+    x: 0,
+    y: 0
+};
