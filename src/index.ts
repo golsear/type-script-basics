@@ -1,14 +1,23 @@
-/** A FIFO (First In First out) collection */
+let exampleAny: any;
+let exampleUnknown: unknown;
 
-class Queue<T> {
-    data: Array<T> = [];
-    push (item: T) { this.data.push(item); }
-    pop (): T { return this.data.shift()!; }
+// any
+exampleAny = 123;
+exampleAny = "Hello";
+
+// unknown
+exampleUnknown = 123;
+exampleUnknown = "World";
+
+// any
+exampleAny.allows.anything.you.can.imagine();
+let anySetBool:boolean = exampleAny;
+
+// unknown
+if (typeof exampleUnknown == 'string') {
+    exampleUnknown.trim();
 }
 
-const queue = new Queue<number>();
-queue.push(123);
-queue.push(456);
-
-console.log(queue.pop().toPrecision(1));
-console.log(queue.pop().toPrecision(1));
+if (typeof exampleUnknown == 'boolean') {
+    let unknownSetBool: boolean = exampleUnknown;
+}
