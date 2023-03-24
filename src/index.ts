@@ -1,21 +1,14 @@
-class Animal {
-    protected name: string;
+/** A FIFO (First In First out) collection */
 
-    constructor (name: string) {
-        this.name = name;
-    }
-
-    public move (distanceInMeters: number): void {
-        console.log(`${this.name} moved ${distanceInMeters}m.`);
-    }
+class Queue<T> {
+    data: Array<T> = [];
+    push (item: T) { this.data.push(item); }
+    pop (): T { return this.data.shift()!; }
 }
 
-let cat = new Animal('Cat');
-cat.move(10);
-// cat.name = 'Dog';
+const queue = new Queue<number>();
+queue.push(123);
+queue.push(456);
 
-class Bird extends Animal {
-    fly (distanceInMeters: number) {
-        console.log(`${this.name} moved ${distanceInMeters}m.`);
-    }
-}
+console.log(queue.pop().toPrecision(1));
+console.log(queue.pop().toPrecision(1));
