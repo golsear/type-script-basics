@@ -1,23 +1,7 @@
-let exampleAny: any;
-let exampleUnknown: unknown;
-
-// any
-exampleAny = 123;
-exampleAny = "Hello";
-
-// unknown
-exampleUnknown = 123;
-exampleUnknown = "World";
-
-// any
-exampleAny.allows.anything.you.can.imagine();
-let anySetBool:boolean = exampleAny;
-
-// unknown
-if (typeof exampleUnknown == 'string') {
-    exampleUnknown.trim();
+function load() {
+    return 'Hello world';
 }
+let hello = load();
 
-if (typeof exampleUnknown == 'boolean') {
-    let unknownSetBool: boolean = exampleUnknown;
-}
+const trimmed = (hello as string).trim();
+// const trimmed1 = (<string>hello).trim(); // not working in tsx files
