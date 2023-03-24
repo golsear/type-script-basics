@@ -1,7 +1,6 @@
-function load() {
-    return 'Hello world';
-}
-let hello = load();
+console.log(
+    'Logged in user:',
+    process.env.USER
+)
 
-const trimmed = (hello as string).trim();
-// const trimmed1 = (<string>hello).trim(); // not working in tsx files
+// declare const process: any;
